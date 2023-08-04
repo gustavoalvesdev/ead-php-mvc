@@ -1,6 +1,10 @@
 # Plataforma EAD
 Plataforma EAD desenvolvida em PHP, arquitetura MVC, bando de dados MySQL. Trabalho em Progresso. 
 
+## Estrutura do Projeto
+
+Este projeto usa a seguinte estrutura MVC básica: [Estrutura MVC](https://github.com/gustavoalvesdev/estrutura_mvc)
+
 ## Estrutura Inicial do Banco de Dados
 
 ### CURSOS
