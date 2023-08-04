@@ -5,7 +5,14 @@ namespace Core;
 class Controller 
 {
 
-    public function loadView($viewName, $viewData = array()) {
+
+    public function __construct()
+    {
+
+    }
+
+    public function loadView($viewName, $viewData = array()) 
+    {
         extract($viewData);
 
 
@@ -13,7 +20,8 @@ class Controller
         require_once 'views/'.$viewName.'.php';
     } 
 
-    public function actionNotFound() {
+    public function actionNotFound() 
+    {
         $this->loadView('not-found');
     }
 }
