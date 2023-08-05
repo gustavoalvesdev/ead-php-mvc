@@ -6,7 +6,9 @@ use Core\Model;
 
 class Aluno extends Model
 {
- 
+    
+    private $info;
+
     public function isLogged()
     {
         //  Sessão do aluno logado
@@ -31,6 +33,28 @@ class Aluno extends Model
 
         return false;
         
+    }
+
+    public function setAluno($id)
+    {
+        $sql = "SELECT * FROM alunos WHERE id = :id LIMIT 1";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(':id', addslashes($id));
+        $sql->execute();
+
+        if ($sql->rowCount() > 0) {
+            $this->info = $sql->fetch();
+        }
+    }
+
+    public function getNome()
+    {
+        return $this->info['nome'];
+    }
+
+    public function getId()
+    {
+        return $this->info['id'];
     }
 
 }

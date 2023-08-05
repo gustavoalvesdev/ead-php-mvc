@@ -20,6 +20,15 @@ class Controller
         require_once 'views/'.$viewName.'.php';
     } 
 
+    public function loadTemplate($templateName, $templateData = array()) 
+    {
+        extract($templateData);
+
+
+
+        require_once 'views/template_parts/'.$templateName.'.php';
+    } 
+
     public function actionNotFound() 
     {
         $this->loadView('not-found');

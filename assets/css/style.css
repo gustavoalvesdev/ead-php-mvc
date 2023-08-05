@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EEE;
+}
+
+.topo {
+    height: 40px;
+    background-color: #333;
+    color: #FFF;
+}
+
+.topo a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.topo a div {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    padding-righT: 20px;
+    padding-left: 20px;
+}
+
+.topo a div:hover {
+    background-color: #555;
+}
+
+.topousuario {
+    float: right;
+    margin-right: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+
+.cursowrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cursoitem {
+    width: 30%;
+    border: 2px solid #CCC;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.cursoitem img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.link_curso {
+    color: #FFF;
+    background-color: rgb(92, 150, 5);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.link_curso:hover {
+    background-color: rgb(62, 100, 4);
+}
+
+@media screen and (max-width: 768px) {
+    .cursoitem {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cursoitem {
+        width: 100%;
+    }
+}
