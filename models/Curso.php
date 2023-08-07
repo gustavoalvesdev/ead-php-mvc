@@ -6,6 +6,9 @@ use Core\Model;
 
 class Curso extends Model
 {
+
+    private $info;
+
     public function getCursosDoAluno($id)
     {
         
@@ -29,12 +32,39 @@ class Curso extends Model
         $sql->bindValue(":id_aluno", addslashes($id));
         $sql->execute();
 
-        if ($sql->rowCount() > 0) {
+        if ($sql->rowCount() > 0)
             $dados = $sql->fetchAll();
-        }
 
         return $dados;
 
+    }
+
+    public function setCurso($id)
+    {
+        $sql = "SELECT * FROM cursos WHERE id = :id LIMIT 1";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(':id', addslashes($id));
+        $sql->execute();
+
+        if ($sql->rowCount() > 0)
+            $this->info = $sql->fetch();
+
+
+    }
+
+    public function getNome()
+    {
+        return $this->info['nome'];
+    }
+
+    public function getImagem()
+    {
+        return $this->info['imagem'];
+    }
+
+    public function getDescricao()
+    {
+        return $this->info['descricao'];
     }
 
 }

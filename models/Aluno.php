@@ -57,4 +57,15 @@ class Aluno extends Model
         return $this->info['id'];
     }
 
+    public function isInscrito($idCurso)
+    {
+        $sql = "SELECT * FROM aluno_curso WHERE id_aluno = :id_aluno AND id_curso = :id_curso";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(':id_aluno', addslashes($this->info['id']));
+        $sql->bindValue(':id_curso', addslashes($idCurso));
+        $sql->execute();
+
+        return $sql->rowCount() > 0;
+    }
+
 }

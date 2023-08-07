@@ -77,6 +77,27 @@ body {
     background-color: rgb(62, 100, 4);
 }
 
+.cursoinfo {
+    width: 100%;
+    background-color: #CCC;
+}
+
+.cursoinfo img {
+    float: left;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.cursoinfo h3 {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.cursoinfo p {
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
 @media screen and (max-width: 768px) {
     .cursoitem {
         width: 45%;

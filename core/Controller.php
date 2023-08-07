@@ -33,4 +33,10 @@ class Controller
     {
         $this->loadView('not-found');
     }
+
+    public function sendTo($url = '') 
+    {
+        header('Location: ' . BASE_URL . $url);
+        exit;
+    }
 }
