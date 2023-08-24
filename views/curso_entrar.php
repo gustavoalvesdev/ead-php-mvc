@@ -6,3 +6,11 @@
     <p><?= $curso->getDescricao() ?></p>
 </div>
 <!-- cursoinfo -->
+<div class="curso_left">
+
+</div>
+<!-- curso_left -->
+<div class="curso_right">
+
+</div>
+<!-- curso_right -->
